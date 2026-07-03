@@ -124,8 +124,7 @@ servers, use [pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter) or
 ### Design decisions
 
 **Proxy dispatch over direct tool registration.**
-Instead of registering every MCP tool as a first-class Pi tool (which inflates
-the system prompt with schemas), a single `mcp` dispatch tool proxies all calls.
+A single `mcp` dispatch tool proxies calls to all connected MCP servers.
 Tool names and one-line descriptions appear in the instructions block, while
 full JSON schemas are fetched on demand via `mcp(describe="tool_name")`.
 
