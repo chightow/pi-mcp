@@ -8,7 +8,9 @@ Lean system prompt — pay for tool schemas only when you use them.
 ## Install
 
 ```bash
-pi install npm:pi-mcp
+git clone https://github.com/chightow/pi-mcp.git
+cd pi-mcp
+pi -e .
 ```
 
 Restart Pi. Create a `.mcp.json` or `.pi/mcp.json` (project root) to configure
