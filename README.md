@@ -147,10 +147,11 @@ to the LLM for self-correction, eliminating the need to maintain a separate
 JSON-Schema-to-TypeBox conversion layer.
 
 **No OAuth.**
-Bearer tokens via `headers` cover virtually all auth-required MCP servers
-in practice. Full OAuth — callback server, browser launch, token refresh,
-headless fallback — would add significant complexity for a small fraction
-of use cases.
+Bearer tokens via `headers` cover many auth-required MCP servers and keep
+the extension lightweight. Full OAuth — callback server, browser launch,
+token refresh, headless fallback — would add significant complexity. For
+servers that require OAuth, use a dedicated adapter like
+[pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter).
 
 ### Project structure
 
