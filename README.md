@@ -124,10 +124,10 @@ servers, use [pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter) or
 ### Design decisions
 
 **Proxy dispatch over direct tool registration.**
-Each MCP tool registered as a first-class Pi tool costs ~150-300 tokens in the
-system prompt (name + description + schema). For servers with 50+ tools, that's
-10k+ tokens before a single word of conversation. The single `mcp` dispatch
-tool costs ~20 tokens regardless of how many servers are connected.
+Instead of registering every MCP tool as a first-class Pi tool (which inflates
+the system prompt with schemas), a single `mcp` dispatch tool proxies all calls.
+Tool names and one-line descriptions appear in the instructions block, while
+full JSON schemas are fetched on demand via `mcp(describe="tool_name")`.
 
 **Schema on demand, not pre-loaded.**
 The `<mcp_instructions>` block carries only tool names and one-line
