@@ -143,8 +143,8 @@ capability.
 **MCP server as validator.**
 Tool arguments are forwarded to the MCP server without client-side schema
 validation. The server returns structured errors that are surfaced directly
-to the LLM for self-correction. No brittle JSON-Schema-to-TypeBox conversion
-to maintain.
+to the LLM for self-correction, eliminating the need to maintain a separate
+JSON-Schema-to-TypeBox conversion layer.
 
 **No OAuth.**
 Bearer tokens via `headers` cover virtually all auth-required MCP servers
