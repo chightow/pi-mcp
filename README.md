@@ -137,8 +137,8 @@ actually inspects before calling.
 
 **Content pass-through over lossy conversion.**
 Images from MCP tools (screenshots, diagrams) are delivered to the model as
-native image content. Alternative implementations map images/audio to
-`[Image: image/png]` text placeholders, which break multimodal models.
+native image content rather than lossy text placeholders, preserving multimodal
+capability.
 
 **MCP server as validator.**
 Tool arguments are forwarded to the MCP server without client-side schema
