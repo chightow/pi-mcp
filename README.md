@@ -210,5 +210,3 @@ config connects on startup and stays connected until session shutdown.
 - `@modelcontextprotocol/client` — MCP SDK v2 (modular, no ajv)
 - `@earendil-works/pi-coding-agent` — Pi extension API
 - `typebox` — Runtime type schemas (peer dependency, provided by pi)
-
-No ajv, no zod, no open, no extraneous dependencies.
