@@ -148,8 +148,9 @@ JSON-Schema-to-TypeBox conversion layer.
 
 **No OAuth.**
 Bearer tokens via `headers` cover virtually all auth-required MCP servers
-in practice. Full OAuth (callback server, browser launch, token refresh,
-headless fallback) would triple the codebase for <2% of use cases.
+in practice. Full OAuth — callback server, browser launch, token refresh,
+headless fallback — would add significant complexity for a small fraction
+of use cases.
 
 ### Project structure
 
