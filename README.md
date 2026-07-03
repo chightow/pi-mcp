@@ -10,10 +10,16 @@ Lean system prompt — pay for tool schemas only when you use them.
 ```bash
 git clone https://github.com/chightow/pi-mcp.git
 cd pi-mcp
-pi -e .
+npm install --ignore-scripts
 ```
 
-Restart Pi. Create a `.mcp.json` or `.pi/mcp.json` (project root) to configure
+Then start pi with the extension flag:
+
+```bash
+pi -e /path/to/pi-mcp
+```
+
+Create a `.mcp.json` or `.pi/mcp.json` in your project root to configure
 servers.
 
 ## Usage
